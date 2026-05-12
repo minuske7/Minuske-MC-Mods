@@ -72,9 +72,10 @@
     const grid = document.getElementById('grid');
 
     function dl(url) {
-        const message = "TO GET THIS MOD YOU NEED TO SUBSCRIBE TO @MINUSKE7!\n\nClick OK to visit the channel and unlock your download.";
+        // UPDATED CHANNEL LINK BELOW
+        const message = "TO GET THIS MOD YOU NEED TO SUBSCRIBE TO @MINUSK7!\n\nClick OK to visit the channel and unlock your download.";
         if(confirm(message)) {
-            window.open("https://www.youtube.com/@Minuske7", "_blank");
+            window.open("https://www.youtube.com/@Minusk7", "_blank");
             window.location.href = url;
         }
     }
@@ -90,7 +91,7 @@
             
             grid.innerHTML = '';
 
-            // ONLY show GodBridge if search is empty or if user specifically searches for it
+            // GodBridge only shows if search is empty or matches name
             if (query === '' || "godbridge".includes(query.toLowerCase())) {
                 const godCard = document.createElement('div');
                 godCard.className = 'mod-card';
