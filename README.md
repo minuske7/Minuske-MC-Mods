@@ -1,6 +1,5 @@
-# 🌉 MINUSKE MC MODS VAULT
+# 🌉 MINUSKE MC MODS 
 
-Welcome to the official mod vault for **@Minuske7**. 
 
 ### [🚀 CLICK HERE TO ENTER THE VAULT](https://minuske7.github.io/Minuske-MC-Mods/)
 
@@ -14,7 +13,7 @@ Welcome to the official mod vault for **@Minuske7**.
 ## 📥 How to Download
 1. Click the **[Portal Link](https://minuske7.github.io/Minuske-MC-Mods/)** above.
 2. Search for your favorite mods.
-3. For the GodBridge mod, make sure you are subscribed to the channel to unlock the link!
+3. For the mods, make sure you are subscribed to the channel to unlock the link!
 
 ---
 © 2026 Minuske7 | Powered by GitHub Pages
