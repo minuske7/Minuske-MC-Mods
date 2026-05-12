@@ -52,19 +52,7 @@
         .mod-icon {
             width: 60px; height: 60px; margin-bottom: 8px;
             border: 2px solid #000; background: #222;
-            object-fit: contain;
-        }
-
-        /* PIXEL ART BRIDGE ICON SCALED FOR SMALL CARD */
-        .pixel-bridge {
-            width: 50px; height: 25px; position: relative;
-            background: #795548; box-shadow: 0 6px 0 #5d4037;
-            margin-bottom: 12px; transform: scale(0.8);
-        }
-        .pixel-bridge::before {
-            content: ""; position: absolute; top: -8px; left: -10px;
-            width: 6px; height: 20px; background: #3e2723;
-            box-shadow: 60px 0 0 #3e2723;
+            object-fit: cover;
         }
 
         .btn { background: #8b8b8b; border: 2px solid #000; padding: 5px; color: white; font-size: 0.35rem; margin-top: 8px; width: 90%; }
@@ -78,12 +66,7 @@
 </header>
 
 <div class="mod-grid" id="grid">
-    <div class="mod-card" onclick="dl('http://www.mediafire.com/file/rb1jxmdvukal4tp/GodBridge-v1.0.jar/file')">
-        <div class="pixel-bridge"></div>
-        <h3 style="font-size: 0.35rem; margin: 0;">GODBRIDGE V1.0</h3>
-        <div class="btn">DOWNLOAD</div>
     </div>
-</div>
 
 <script>
     const grid = document.getElementById('grid');
@@ -105,10 +88,20 @@
             const response = await fetch(url);
             const data = await response.json();
             
-            // Keep the GodBridge card at the start
-            const firstCard = grid.firstElementChild;
             grid.innerHTML = '';
-            grid.appendChild(firstCard);
+
+            // ONLY show GodBridge if search is empty or if user specifically searches for it
+            if (query === '' || "godbridge".includes(query.toLowerCase())) {
+                const godCard = document.createElement('div');
+                godCard.className = 'mod-card';
+                godCard.onclick = () => dl('http://www.mediafire.com/file/rb1jxmdvukal4tp/GodBridge-v1.0.jar/file');
+                godCard.innerHTML = `
+                    <img src="godbridge_icon.jpg" class="mod-icon">
+                    <h3 style="font-size: 0.35rem; margin: 0;">GODBRIDGE V1.0</h3>
+                    <div class="btn">DOWNLOAD</div>
+                `;
+                grid.appendChild(godCard);
+            }
 
             data.hits.forEach(mod => {
                 const card = document.createElement('div');
